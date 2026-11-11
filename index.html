@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Paddock Inbox</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box} :root{font-family:'DM Sans',system-ui,sans-serif;color:#24231f;background:#f5f2e9;font-synthesis:none} body{margin:0} button{font:inherit;cursor:pointer} button:focus-visible,a:focus-visible{outline:3px solid #274d84;outline-offset:3px} .page{min-height:100vh;overflow:hidden;background:radial-gradient(ellipse at 90% 10%,#f7deca 0,transparent 35%),#f5f2e9}.layout{max-width:1380px;margin:auto;min-height:100vh;display:grid;grid-template-columns:minmax(430px,600px) minmax(420px,1fr);gap:50px;padding:40px 7% 42px}.intro{display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.16em;font-weight:700}.brand-mark{font-size:27px;color:#f16a38;line-height:1}.brand-badge{font-family:'DM Sans',sans-serif;letter-spacing:.1em;color:#80512d;background:#f4dfca;padding:6px 9px;border-radius:30px;font-size:9px}.hero{margin-top:69px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.15em;color:#b95835}.spark{font-size:16px}.hero h1{font:700 clamp(48px,5.5vw,76px)/.98 'Space Grotesk',sans-serif;letter-spacing:-.065em;margin:19px 0 20px}.hero em{font-style:normal;color:#ed6d3b}.lede{max-width:420px;font-size:15px;line-height:1.65;color:#66645c;margin:0}.controls{margin-top:45px}.section-head{display:flex;gap:13px;align-items:flex-start}.section-head .step{font:700 11px 'Space Grotesk',sans-serif;color:#c65e3a;background:#f4dfcf;padding:8px;border-radius:8px}.section-head h2{font:700 16px 'Space Grotesk',sans-serif;margin:0 0 3px}.section-head p{font-size:12px;color:#77756d;margin:0}.topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:16px 0 26px}.topic{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid #e3dfd5;background:#fffdf8;border-radius:12px;padding:11px 12px;min-height:62px;color:#24231f;transition:.15s}.topic:hover{border-color:#ee916a;transform:translateY(-1px)}.topic.selected{background:#fff5ed;border-color:#e68155;box-shadow:0 0 0 1px #e68155 inset}.topic-icon{font-size:20px;width:27px;text-align:center}.topic-text{display:flex;flex-direction:column;gap:3px;flex:1}.topic strong{font-size:12px}.topic small{font-size:10px;color:#7f7c73}.topic-dot{width:7px;height:7px;border-radius:50%;background:#e3dfd5}.selected .topic-dot{background:#ec7244}.mood-head{margin-top:8px}.moods{display:flex;gap:8px;margin:15px 0}.moods button{background:#fffdf8;border:1px solid #e3dfd5;border-radius:100px;padding:10px 15px;color:#67645d;font-size:12px;font-weight:700}.moods button.active{background:#2d2c27;color:white;border-color:#2d2c27}.generate{width:100%;height:53px;display:flex;justify-content:space-between;align-items:center;padding:0 19px;background:#ef7547;color:#191a17;border:0;border-radius:12px;font-weight:800;font-size:13px;box-shadow:0 6px 0 #df6035;transition:transform .15s}.generate:hover{transform:translateY(-2px)}.generate span:last-child{font-size:21px}.help{font-size:11px;color:#77746c;margin:14px 0 0;line-height:1.5}.footnote{font-size:10px;line-height:1.6;color:#77746c;margin-top:48px;max-width:460px}.footnote a{color:#975234;font-weight:700}.phone-area{position:relative;display:flex;align-items:center;justify-content:center;min-height:800px}.phone-area:before{content:'';position:absolute;width:520px;height:520px;background:#f3d7bf;border-radius:50%;opacity:.68}.phone-area:after{content:'';position:absolute;width:570px;height:570px;border:1px solid #e8cbb5;border-radius:50%}.float-label{position:absolute;z-index:2;font:700 10px 'Space Grotesk',sans-serif;letter-spacing:.13em;line-height:1.5;color:#a36649}.float-label.one{top:18%;left:0}.float-label.two{bottom:19%;right:0}.float-label span{font-size:21px;color:#e5774c}.phone{width:365px;height:755px;max-height:86vh;min-height:620px;background:#fbfaf7;border:8px solid #292a27;border-radius:46px;box-shadow:0 28px 60px #735c4b33,0 0 0 2px #4c4b44;position:relative;z-index:3;display:flex;flex-direction:column;overflow:hidden}.phone-notch{position:absolute;left:50%;top:8px;transform:translateX(-50%);width:102px;height:25px;background:#292a27;border-radius:18px;z-index:2}.phone-status{height:42px;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;padding:3px 22px 0;font-weight:800;font-size:10px;color:#24231f}.phone-header{display:flex;align-items:center;gap:9px;padding:13px 14px 14px;border-bottom:1px solid #eeeae3;background:#fffefa}.back{font-size:27px;line-height:1;color:#e3764b}.avatars{display:flex;padding-right:9px}.avatar{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font:700 12px 'Space Grotesk',sans-serif;border:2px solid #fffefa}.ln{background:#f4a472;color:#63311c}.op{background:#d6e6d4;color:#345b47;margin-left:-9px}.chat-title{flex:1;display:flex;flex-direction:column;gap:3px}.chat-title strong{font:700 13px 'Space Grotesk',sans-serif}.chat-title strong span{color:#ee7747}.chat-title small{font-size:10px;color:#8d8a82}.copy{border:0;background:#f4f0e9;color:#6f6b61;border-radius:8px;min-width:33px;height:33px;font-size:16px}.chat{background:#faf8f3;flex:1;overflow:auto;padding:17px 15px;scrollbar-width:thin;scrollbar-color:#e4d5c9 transparent}.chat-label{width:max-content;max-width:100%;margin:0 auto 18px;background:#f3e3d5;color:#aa6143;border-radius:20px;padding:7px 11px;font-size:9px;font-weight:800;letter-spacing:.08em}.chat-label span{color:#ed8459}.day{text-align:center;color:#aaa49b;font-size:9px;font-weight:700;letter-spacing:.12em;margin-bottom:17px}.message{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:12px}.message.right{align-items:flex-end}.sender{font-size:9px;font-weight:700;color:#948d83;margin:0 5px 4px}.bubble{max-width:83%;background:#edece6;border-radius:4px 15px 15px 15px;padding:10px 12px;font-size:12px;line-height:1.45;color:#33322e}.right .bubble{background:#f7d2b8;border-radius:15px 4px 15px 15px}.branch{margin:20px 0 4px;background:#fffefa;border:1px solid #eee7dd;border-radius:14px;padding:15px}.branch-title{font-size:9px;font-weight:800;color:#a65c3d;letter-spacing:.08em;display:flex;justify-content:space-between}.branch p{font:700 14px 'Space Grotesk',sans-serif;margin:7px 0 12px}.branch-options{display:grid;gap:6px}.branch-options button{background:#f8f4ed;border:1px solid #eae4d9;text-align:left;border-radius:8px;padding:9px 10px;font-size:11px;font-weight:700;color:#4b4841;display:flex;justify-content:space-between}.branch-options button:hover{background:#f9e1d2}.branch-options span{color:#d7754f}.ending{text-align:center;font-size:9px;font-weight:800;letter-spacing:.1em;color:#ad795e;margin:20px 0 8px}.ending button{display:block;margin:10px auto 0;background:transparent;border:0;color:#a34e30;font-weight:700;font-size:11px;letter-spacing:0}.phone-bottom{height:39px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fffefa;border-top:1px solid #eeeae3;color:#b1aaa1;font-size:9px;font-weight:700;letter-spacing:.12em;flex-shrink:0}.phone-bottom span{color:#e97d51;font-size:14px}.homebar{height:4px;width:110px;background:#292a27;border-radius:4px;margin:4px auto 7px;flex-shrink:0}@media(max-width:1000px){.layout{padding-left:5%;padding-right:5%;gap:20px}.float-label{display:none}.phone-area:before{width:420px;height:420px}.phone-area:after{width:460px;height:460px}}@media(max-width:760px){.layout{display:flex;flex-direction:column;padding:25px 20px 45px;gap:12px}.hero{margin-top:50px}.hero h1{font-size:54px}.controls{margin-top:35px}.phone-area{order:2;min-height:730px;margin-top:5px}.phone{height:700px;max-height:none;width:min(365px,100%)}.phone-area:before{width:380px;height:380px}.phone-area:after{width:420px;height:420px}.footnote{margin-top:25px}.topics{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:390px){.topic{padding:9px 7px;gap:5px}.topic strong{font-size:11px}.hero h1{font-size:48px}.moods button{padding:10px}}
+
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script>
+const { useEffect, useRef, useState } = React;
+const m = (who, text) => ({ who, text });
+const topics = [
+  { name: "Race weekend", icon: "\u{1F3C1}", sub: "Paddock banter" },
+  { name: "Coffee run", icon: "\u2615", sub: "A little detour" },
+  { name: "Gaming night", icon: "\u{1F3AE}", sub: "Friendly rivalry" },
+  { name: "Late-night texts", icon: "\u{1F319}", sub: "After hours" },
+  { name: "Travel day", icon: "\u2708\uFE0F", sub: "Gate-side chaos" }
+];
+const scenes = {
+  "Race weekend": [
+    [m("Lando", "Important question: if I steal your lucky cap, do I get faster?"), m("Oscar", "No. You just become easier to spot."), m("Lando", "So you do look for me in the paddock?"), m("Oscar", "Mostly when I want my cap back."), m("Lando", "Mostly? That\u2019s not a no."), m("Oscar", "I knew you\u2019d focus on that word.")],
+    [m("Oscar", "You left your water bottle in the garage again."), m("Lando", "I was testing if you\u2019d bring it to me."), m("Oscar", "A very sophisticated strategy."), m("Lando", "And yet it worked."), m("Oscar", "I was walking this way anyway."), m("Lando", "You\u2019re terrible at pretending you don\u2019t care.")],
+    [m("Lando", "I think my race engineer likes you more than me."), m("Oscar", "Have you tried being less dramatic?"), m("Lando", "Have you tried being less annoyingly calm?"), m("Oscar", "Once. Didn\u2019t suit me."), m("Lando", "Fine. Come find me before the briefing?"), m("Oscar", "Only if you promise to be slightly dramatic.")]
+  ],
+  "Coffee run": [
+    [m("Lando", "Coffee emergency. The queue is massive."), m("Oscar", "That sounds like a you problem."), m("Lando", "It could be an us problem if you joined me."), m("Oscar", "That\u2019s a surprisingly effective sales pitch."), m("Lando", "I\u2019ll even remember your order this time."), m("Oscar", "Let\u2019s not make promises we can\u2019t keep.")],
+    [m("Oscar", "You ordered two coffees. Expecting someone?"), m("Lando", "Maybe I was hoping my favourite Australian would show up."), m("Oscar", "That\u2019s a very specific bet."), m("Lando", "It paid off, didn\u2019t it?"), m("Oscar", "Depends. Did you get the order right?"), m("Lando", "Drink it and pretend I did.")],
+    [m("Lando", "Rate this coffee out of ten."), m("Oscar", "The coffee or your choice of caf\xE9?"), m("Lando", "Both. Be nice."), m("Oscar", "Coffee: eight. Company: still under review."), m("Lando", "Brutal. I\u2019ll have to win you over."), m("Oscar", "I suspect you\u2019re already trying.")]
+  ],
+  "Gaming night": [
+    [m("Lando", "Rematch. You only won because my controller was weird."), m("Oscar", "It was my controller."), m("Lando", "Exactly. Suspicious."), m("Oscar", "I can give you a head start next time."), m("Lando", "I\u2019d rather have you on my team."), m("Oscar", "That\u2019s one way to stop me winning against you.")],
+    [m("Oscar", "Are you actually practising for game night?"), m("Lando", "No. Yes. Maybe a little."), m("Oscar", "I admire the commitment."), m("Lando", "I need you to be impressed by me somehow."), m("Oscar", "I haven\u2019t said I\u2019m not."), m("Lando", "Wait. Say that again.")],
+    [m("Lando", "Co-op or versus? Choose wisely."), m("Oscar", "Co-op. You\u2019re a sore loser."), m("Lando", "And you\u2019re smug when you win."), m("Oscar", "So we agree we\u2019re better together."), m("Lando", "You said it, not me."), m("Oscar", "I\u2019m starting to regret it already.")]
+  ],
+  "Late-night texts": [
+    [m("Lando", "You awake?"), m("Oscar", "Apparently."), m("Lando", "Good. I had a very important thought."), m("Oscar", "This should be interesting."), m("Lando", "You\u2019re much nicer than you pretend to be."), m("Oscar", "Don\u2019t spread that around. I have a reputation.")],
+    [m("Oscar", "You\u2019re still online."), m("Lando", "So are you \u{1F440}"), m("Oscar", "I was checking if you\u2019d finally gone to sleep."), m("Lando", "Concerned about me? Cute."), m("Oscar", "Concerned about tomorrow\u2019s briefing."), m("Lando", "Sure. That\u2019s definitely the only reason.")],
+    [m("Lando", "Can\u2019t sleep. Tell me something interesting."), m("Oscar", "You\u2019ve sent me seven messages in three minutes."), m("Lando", "That\u2019s not interesting, that\u2019s a cry for attention."), m("Oscar", "At least you\u2019re honest."), m("Lando", "And yet here you are replying."), m("Oscar", "Maybe I don\u2019t mind the attention.")]
+  ],
+  "Travel day": [
+    [m("Lando", "Tell me you saved me a seat."), m("Oscar", "I saved the seat next to me from everyone else."), m("Lando", "That sounds suspiciously thoughtful."), m("Oscar", "Don\u2019t make me regret it."), m("Lando", "Too late. I\u2019m bringing snacks."), m("Oscar", "All right. You can stay.")],
+    [m("Oscar", "Our gate changed. Again."), m("Lando", "You know what that means?"), m("Oscar", "A longer walk?"), m("Lando", "More time with your favourite travel companion."), m("Oscar", "The snacks are coming too, then?"), m("Lando", "I walked right into that one.")],
+    [m("Lando", "You could have woken me before boarding."), m("Oscar", "I did. Twice."), m("Lando", "And the third time?"), m("Oscar", "I considered leaving you there."), m("Lando", "But you didn\u2019t."), m("Oscar", "You looked too comfortable. It was distracting.")]
+  ]
+};
+const closers = {
+  Soft: [
+    [m("Lando", "You know I like having you around, right?"), m("Oscar", "Yeah. I like having you around too."), m("Lando", "Good. Just checking. \u{1F9E1}")],
+    [m("Oscar", "For the record, I\u2019m glad you\u2019re here."), m("Lando", "Careful, I might start thinking you like me."), m("Oscar", "Would that be so bad?")],
+    [m("Lando", "You make the long days a bit better, you know."), m("Oscar", "Don\u2019t get sentimental on me."), m("Lando", "Too late. You\u2019re stuck with it.")]
+  ],
+  Playful: [
+    [m("Lando", "Admit it, I\u2019m your favourite distraction."), m("Oscar", "I\u2019ll admit you\u2019re a distraction."), m("Lando", "I\u2019ll take it. \u{1F609}")],
+    [m("Oscar", "Do you ever stop flirting?"), m("Lando", "Only when it stops working."), m("Oscar", "So, never. Got it.")],
+    [m("Lando", "You\u2019re smiling at your phone, aren\u2019t you?"), m("Oscar", "You have no evidence."), m("Lando", "That\u2019s a yes then. \u{1F60C}")]
+  ]
+};
+const branches = {
+  "Turn up the teasing": [m("Lando", "You\u2019re enjoying this more than you\u2019re admitting."), m("Oscar", "And you\u2019re enjoying investigating it."), m("Lando", "Only because you\u2019re my favourite mystery. \u{1F609}"), m("Oscar", "I\u2019ll allow it. This once.")],
+  "Make it sweet": [m("Lando", "Jokes aside, I\u2019m really glad I get to share these little moments with you."), m("Oscar", "Me too. Even when you\u2019re being ridiculous."), m("Lando", "Especially then?"), m("Oscar", "Especially then. \u{1F9E1}")],
+  "Keep it competitive": [m("Oscar", "We should settle this with a competition."), m("Lando", "Winner gets to pick our next adventure?"), m("Oscar", "Deal. Try not to get too distracted."), m("Lando", "No promises when you\u2019re involved.")]
+};
+const pick = (items) => items[Math.floor(Math.random() * items.length)];
+const makeChat = (topic, mood, previous = -1) => {
+  const pool = scenes[topic];
+  let ix = Math.floor(Math.random() * pool.length);
+  if (pool.length > 1 && ix === previous) ix = (ix + 1 + Math.floor(Math.random() * (pool.length - 1))) % pool.length;
+  return { messages: [...pool[ix], ...pick(closers[mood])], scene: ix };
+};
+function App() {
+  const [topic, setTopic] = useState("Race weekend");
+  const [mood, setMood] = useState("Playful");
+  const [messages, setMessages] = useState(() => makeChat("Race weekend", "Playful").messages);
+  const [lastScene, setLastScene] = useState(-1);
+  const [branch, setBranch] = useState("");
+  const [copied, setCopied] = useState(false);
+  const end = useRef(null);
+  const chat = useRef(null);
+  const fresh = (t, v, previous = -1) => {
+    const result = makeChat(t, v, previous);
+    setMessages(result.messages);
+    setLastScene(result.scene);
+    setBranch("");
+    setCopied(false);
+    if (chat.current) chat.current.scrollTop = 0;
+  };
+  const selectTopic = (t) => {
+    setTopic(t);
+    fresh(t, mood, t === topic ? lastScene : -1);
+  };
+  const selectMood = (v) => {
+    setMood(v);
+    fresh(topic, v, lastScene);
+  };
+  const addBranch = (b) => {
+    setBranch(b);
+    setMessages((prev) => [...prev, ...branches[b]]);
+  };
+  useEffect(() => {
+    if (branch) end.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, [branch]);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(`Fictional fan chat \u2022 ${topic} / ${mood}
+
+` + messages.map((x) => `${x.who}: ${x.text}`).join("\n"));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2200);
+    } catch {
+      setCopied(false);
+      alert("Copy isn\u2019t available here. You can select the messages manually.");
+    }
+  };
+  return /* @__PURE__ */ React.createElement("div", { className: "page" }, /* @__PURE__ */ React.createElement("main", { className: "layout" }, /* @__PURE__ */ React.createElement("section", { className: "intro", "aria-labelledby": "heading" }, /* @__PURE__ */ React.createElement("div", { className: "brand" }, /* @__PURE__ */ React.createElement("span", { className: "brand-mark" }, "\u2733"), " THE PADDOCK INBOX ", /* @__PURE__ */ React.createElement("span", { className: "brand-badge" }, "FAN GAME")), /* @__PURE__ */ React.createElement("div", { className: "hero" }, /* @__PURE__ */ React.createElement("div", { className: "eyebrow" }, /* @__PURE__ */ React.createElement("span", { className: "spark" }, "\u2726"), " YOUR FRONT-ROW SEAT TO THE BANTER"), /* @__PURE__ */ React.createElement("h1", { id: "heading" }, "Fast cars.", /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("em", null, "Faster"), " texts."), /* @__PURE__ */ React.createElement("p", { className: "lede" }, "Pick a scene, set the mood, and see where the conversation takes Lando and Oscar.")), /* @__PURE__ */ React.createElement("div", { className: "controls" }, /* @__PURE__ */ React.createElement("div", { className: "section-head" }, /* @__PURE__ */ React.createElement("span", { className: "step" }, "01"), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h2", null, "Pick a scene"), /* @__PURE__ */ React.createElement("p", null, "Where does the story start?"))), /* @__PURE__ */ React.createElement("div", { className: "topics", role: "group", "aria-label": "Conversation scene" }, topics.map((t) => /* @__PURE__ */ React.createElement("button", { key: t.name, className: "topic " + (topic === t.name ? "selected" : ""), "aria-pressed": topic === t.name, onClick: () => selectTopic(t.name) }, /* @__PURE__ */ React.createElement("span", { className: "topic-icon" }, t.icon), /* @__PURE__ */ React.createElement("span", { className: "topic-text" }, /* @__PURE__ */ React.createElement("strong", null, t.name), /* @__PURE__ */ React.createElement("small", null, t.sub)), /* @__PURE__ */ React.createElement("span", { className: "topic-dot", "aria-hidden": "true" })))), /* @__PURE__ */ React.createElement("div", { className: "section-head mood-head" }, /* @__PURE__ */ React.createElement("span", { className: "step" }, "02"), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h2", null, "Set the mood"), /* @__PURE__ */ React.createElement("p", null, "A little chemistry, your way."))), /* @__PURE__ */ React.createElement("div", { className: "moods", role: "group", "aria-label": "Conversation mood" }, /* @__PURE__ */ React.createElement("button", { className: mood === "Soft" ? "active" : "", "aria-pressed": mood === "Soft", onClick: () => selectMood("Soft") }, "\u2661 \xA0Soft & sweet"), /* @__PURE__ */ React.createElement("button", { className: mood === "Playful" ? "active" : "", "aria-pressed": mood === "Playful", onClick: () => selectMood("Playful") }, "\u2726 \xA0Playfully flirty")), /* @__PURE__ */ React.createElement("button", { className: "generate", onClick: () => fresh(topic, mood, lastScene) }, /* @__PURE__ */ React.createElement("span", null, "Shuffle conversation"), /* @__PURE__ */ React.createElement("span", null, "\u2197")), /* @__PURE__ */ React.createElement("p", { className: "help" }, "Each shuffle remixes a prewritten scene and ending. No AI or login needed.")), /* @__PURE__ */ React.createElement("div", { className: "footnote" }, /* @__PURE__ */ React.createElement("strong", null, "A little note"), " \xB7 This is unofficial fan fiction. The messages and imagined romance are made up, not real statements or a claim about anyone\u2019s relationship. Inspired by their public, joking teammate dynamic. ", /* @__PURE__ */ React.createElement("a", { href: "https://www.formula1.com/en/latest/article/norris-hails-better-than-ever-relationship-with-team-mate-piastri-amid-title.1kINFA9hKi7spBD7kJoJ5u", target: "_blank", rel: "noreferrer" }, "Read more \u2197"))), /* @__PURE__ */ React.createElement("section", { className: "phone-area", "aria-label": "Fictional conversation" }, /* @__PURE__ */ React.createElement("div", { className: "float-label one" }, "THE GROUP CHAT ", /* @__PURE__ */ React.createElement("span", null, "\u2198")), /* @__PURE__ */ React.createElement("div", { className: "float-label two" }, "A LITTLE BIT", /* @__PURE__ */ React.createElement("br", null), "OF CHEMISTRY ", /* @__PURE__ */ React.createElement("span", null, "\u2733")), /* @__PURE__ */ React.createElement("div", { className: "phone" }, /* @__PURE__ */ React.createElement("div", { className: "phone-notch", "aria-hidden": "true" }), /* @__PURE__ */ React.createElement("div", { className: "phone-status" }, /* @__PURE__ */ React.createElement("span", null, "9:41"), /* @__PURE__ */ React.createElement("span", null, "\u25AE\u25AE\u25AE \xA0\u25CF \xA0\u25B0")), /* @__PURE__ */ React.createElement("div", { className: "phone-header" }, /* @__PURE__ */ React.createElement("div", { className: "back", "aria-hidden": "true" }, "\u2039"), /* @__PURE__ */ React.createElement("div", { className: "avatars" }, /* @__PURE__ */ React.createElement("span", { className: "avatar ln" }, "L"), /* @__PURE__ */ React.createElement("span", { className: "avatar op" }, "O")), /* @__PURE__ */ React.createElement("div", { className: "chat-title" }, /* @__PURE__ */ React.createElement("strong", null, "Lando & Oscar ", /* @__PURE__ */ React.createElement("span", null, "\u2726")), /* @__PURE__ */ React.createElement("small", null, "fictional fan chat")), /* @__PURE__ */ React.createElement("button", { className: "copy", onClick: copy, "aria-label": "Copy conversation" }, copied ? "Copied" : "\u29C9")), /* @__PURE__ */ React.createElement("div", { className: "chat", ref: chat, "aria-live": "polite" }, /* @__PURE__ */ React.createElement("div", { className: "chat-label" }, /* @__PURE__ */ React.createElement("span", null, "\u2726"), " ", topic.toUpperCase(), " \xB7 ", mood.toUpperCase(), " ", /* @__PURE__ */ React.createElement("span", null, "\u2726")), /* @__PURE__ */ React.createElement("div", { className: "day" }, "TODAY"), messages.map((msg, i) => /* @__PURE__ */ React.createElement("div", { key: i, className: "message " + (msg.who === "Lando" ? "right" : "left") }, /* @__PURE__ */ React.createElement("span", { className: "sender" }, msg.who), /* @__PURE__ */ React.createElement("div", { className: "bubble" }, msg.text))), !branch ? /* @__PURE__ */ React.createElement("div", { className: "branch" }, /* @__PURE__ */ React.createElement("div", { className: "branch-title" }, "YOUR TURN TO DIRECT THE CHAT ", /* @__PURE__ */ React.createElement("span", null, "\u2726")), /* @__PURE__ */ React.createElement("p", null, "What happens next?"), /* @__PURE__ */ React.createElement("div", { className: "branch-options" }, Object.keys(branches).map((b) => /* @__PURE__ */ React.createElement("button", { key: b, onClick: () => addBranch(b) }, b, " ", /* @__PURE__ */ React.createElement("span", null, "\u2197"))))) : /* @__PURE__ */ React.createElement("div", { className: "ending" }, "\u2726 \xA0 END OF CHAT \xA0 \u2726", /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("button", { onClick: () => fresh(topic, mood, lastScene) }, "Start another conversation \u2197")), /* @__PURE__ */ React.createElement("div", { ref: end })), /* @__PURE__ */ React.createElement("div", { className: "phone-bottom" }, /* @__PURE__ */ React.createElement("span", null, "\u2727"), " MADE FOR THE BANTER ", /* @__PURE__ */ React.createElement("span", null, "\u2727")), /* @__PURE__ */ React.createElement("div", { className: "homebar" })))));
+}
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(App, null));
+
+</script>
+</body>
+</html>
